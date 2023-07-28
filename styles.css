@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2, main > section > p, #previousPrice {
+    color: hsl(228, 12%, 48%);
+}
+
+h2, main > section > p {
+    font-family: Montserrat, "sans serif";
+}
+
+h1, #discountedPrice {
+    font-family: Fraunces;
+    font-weight: 700;
+}
+
+img[src*= "desktop"]{
+    display: none;
+}
+
+img[src*="mobile"]{
+    border-radius: 1rem 1rem 0 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body{
+    background-color: hsl(30, 38%, 92%);
+    min-height: 100vh;
+    padding: 5vw;
+}
+
+main {
+    background-color: hsl(0, 0%, 100%);
+    flex-direction: column;
+    width: 90vw;
+    border-radius: 1rem;
+}
+
+section > p {
+    font-size: 14px;
+}
+
+body, main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 1.9rem;
+}
+
+#priceContainer {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#discountedPrice {
+    font-size: 1.9rem;
+    color:hsl(158, 36%, 37%);
+}
+
+#previousPrice {
+   text-decoration: line-through;
+   font-size: 0.9rem;
+}
+
+button{
+    width: 100%;
+    background-color: hsl(158, 36%, 37%);
+    border: 0;
+    color: hsl(0, 0%, 100%);
+    padding: 0.9rem;
+    border-radius: 0.3rem;
+    font-family: Montserrat, "sans serif";
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+}
+
+@media (min-width:660px){
+    img[src*="mobile"]{
+        display: none;
+    }
+    img[src*="desktop"]{
+        display: inline-block;
+        max-width: 50%;
+        max-height: 100%;
+        border-radius: 1.2rem 0 0 1.2rem;
+    }
+    main {
+        flex-direction: row;
+        border-radius: 1.2rem;
+        max-width: 586px;
+    }
+
+    section {
+        align-self: flex-start;
+        padding: 1.8rem 1.3rem 0;
+        gap: 1.5rem;
+    }
+
+
+
+}
